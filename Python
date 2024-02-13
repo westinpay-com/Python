@@ -1,0 +1,27 @@
+import requests
+
+parameters = {
+    'identifier': 'DFU80XZIKS',
+    'currency': 'USD',
+    'amount': 100.00,
+    'details': 'Purchase T-shirt',
+    'ipn_url': 'http://example.com/ipn_url.php',
+    'cancel_url': 'http://example.com/cancel_url.php',
+    'success_url': 'http://example.com/success_url.php',
+    'public_key': 'your_public_key',
+    'site_logo': 'https://westinpay.com/assets/images/logoIcon/logo.png',
+    'checkout_theme': 'dark',
+    'customer_name': 'John Doe',
+    'customer_email': 'john@mail.com',
+}
+
+# Live endpoint
+url = "https://westinpay.com/payment/initiate"
+
+# Test endpoint
+# url = "https://westinpay.com/sandbox/payment/initiate"
+
+response = requests.post(url, data=parameters)
+
+# response contains the response back.
+print(response.text)
