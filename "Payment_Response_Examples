@@ -1,0 +1,12 @@
+# Hata Yanıtı
+error_response = {
+    "error": "true",
+    "message": "Invalid api key"
+}
+
+# Başarılı Yanıt
+success_response = {
+    "success": "ok",
+    "message": "Payment Initiated. Redirect to url.",
+    "url": "http://example.com/initiate/payment/checkout?payment_id=eJSAASDxdrt4DASDASVNASJA7893232432cvmdsamnvASF"
+}
